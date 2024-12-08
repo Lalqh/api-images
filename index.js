@@ -8,8 +8,8 @@ import { fileURLToPath } from 'url';
 dotenv.config();
 
 const app = express();
-const PORT = 3000;
-const HOST = 'https://compactmcbe.online/img';
+const PORT = 4000;
+const HOST = 'https://compactmcbe.online';
 
 // Obtén la ruta del directorio actual
 const __filename = fileURLToPath(import.meta.url);
