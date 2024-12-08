@@ -21,11 +21,11 @@ app.use(express.urlencoded({ limit: '10000mb', extended: true }));
 // Configura Express para servir archivos estáticos desde el directorio "images"
 app.use('/images', express.static(path.join(__dirname, 'images')));
 
-app.get('/', (req, res) => {
+app.get('/imgOk', (req, res) => {
   res.send('Hello World!');
 });
 
-app.post('/', (req, res) => {
+app.post('/upimg', (req, res) => {
     const { img, apiKey } = req.body;
 
     console.log('Received request with API key:', apiKey);
