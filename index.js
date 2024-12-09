@@ -49,7 +49,7 @@ app.post('/upimg', (req, res) => {
             console.error('Error saving the image:', err);
             return res.status(500).send('Error saving the image');
         }
-        const imageUrl = `${HOST}:${PORT}/images/${fileName}`;
+        const imageUrl = `${HOST}/images/${fileName}`;
         console.log('Image saved successfully as:', fileName);
         res.status(200).send({ message: 'Image saved successfully', url: imageUrl });
     });
